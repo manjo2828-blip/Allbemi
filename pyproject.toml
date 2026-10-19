@@ -1,0 +1,10 @@
+[project]
+name = "allbemi-workspace"
+version = "0.0.0"
+description = "Allbemi - 업무 의사결정 카드 기반 인수인계 서비스"
+requires-python = ">=3.12"
+dependencies = []
+
+# 서비스 패키지(backend, agent, model-server, libs/common)가 생기면 uv workspace로 묶는다.
+# [tool.uv.workspace]
+# members = ["backend", "agent", "model-server", "libs/common"]
