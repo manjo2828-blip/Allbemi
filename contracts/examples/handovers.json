@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ho_001",
+    "from_user_id": "user_minjun",
+    "to_user_id": "user_seoyeon",
+    "scope": {
+      "project_ids": [
+        "proj_dev"
+      ],
+      "from": "2026-03-01T00:00:00Z",
+      "to": "2026-06-10T00:00:00Z"
+    },
+    "status": "in_review",
+    "memo": "검색 엔진 전환 일정은 첨부된 OpenSearch 전환 계획을 먼저 보세요. 로그 보관 기간(90일)은 근거가 약해서 인수인계 카드에 넣지 않았습니다.",
+    "card_ids": [
+      "card_h01",
+      "card_h02",
+      "card_h03",
+      "card_h04",
+      "card_h05"
+    ],
+    "reviews": [
+      {
+        "card_id": "card_h01",
+        "state": "understood",
+        "comment": null
+      },
+      {
+        "card_id": "card_h03",
+        "state": "understood",
+        "comment": null
+      },
+      {
+        "card_id": "card_h02",
+        "state": "question",
+        "comment": "전환 일정이 지금 어디까지 진행됐나요?"
+      }
+    ],
+    "created_at": "2026-06-10T01:00:00Z",
+    "updated_at": "2026-06-12T05:00:00Z"
+  }
+]

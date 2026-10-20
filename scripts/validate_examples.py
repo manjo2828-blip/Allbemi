@@ -33,12 +33,16 @@ logs = load(EX / "logs.json")
 cards = load(EX / "cards.json")
 files = load(EX / "files.json")
 judgments = load(EX / "judgments.json")
+users = load(EX / "users.json")
+handovers = load(EX / "handovers.json")
 
 validate(projects, "project.schema.json", "project")
 validate(logs, "log.schema.json", "log")
 validate(cards, "decision-card.schema.json", "card")
 validate(files, "file.schema.json", "file")
 validate(judgments, "judgment.schema.json", "judgment")
+validate(users, "user.schema.json", "user")
+validate(handovers, "handover.schema.json", "handover")
 
 proj = {p["id"] for p in projects}
 log_by = {x["id"]: x for x in logs}
@@ -53,11 +57,8 @@ def dup(items, label):
             errors.append(f"[중복] {label} id {i}")
 
 
-for items, label in [(projects, "project"), (logs, "log"), (cards, "card"), (files, "file"), (judgments, "judgment")]:
+for items, label in [(projects, "project"), (logs, "log"), (cards, "card"), (files, "file"), (judgments, "judgment"), (users, "user"), (handovers, "handover")]:
     dup(items, label)
-
-if sum(1 for p in projects if p["is_default"]) != 1:
-    errors.append("[프로젝트] is_default가 true인 프로젝트는 정확히 1개여야 한다")
 
 for x in logs:
     if x["project_id"] not in proj:
@@ -82,6 +83,22 @@ for c in cards:
             errors.append(f"[근거] card {cid}: 인용문이 원문에 없음 → {e['quote']!r}")
         if "span" in e and text[e["span"][0]:e["span"][1]] != e["quote"]:
             errors.append(f"[근거] card {cid}: span이 인용문과 맞지 않음 → {e['quote']!r}")
+    for step in c["process"]:
+        ev = step.get("evidence")
+        if ev:
+            lg = log_by.get(ev["log_id"])
+            if not lg or ev["message_index"] >= len(lg["messages"]):
+                errors.append(f"[과정] card {cid}: 과정 근거의 로그 위치가 잘못됨")
+            elif ev["quote"] not in lg["messages"][ev["message_index"]]["text"]:
+                errors.append(f"[과정] card {cid}: 과정 인용문이 원문에 없음 → {ev['quote']!r}")
+    for sid in c["source_card_ids"]:
+        src = card_by.get(sid)
+        if not src:
+            errors.append(f"[원본] card {cid}: 없는 원본 카드 {sid}")
+        elif src["kind"] != "work":
+            errors.append(f"[원본] card {cid}: 원본 {sid}은 업무 기록 카드(kind=work)여야 한다")
+        elif src["project_id"] != c["project_id"]:
+            errors.append(f"[원본] card {cid}: 다른 프로젝트의 원본 카드 {sid}")
     for a in c["attachments"]:
         fl = file_by.get(a["file_id"])
         if not fl:
@@ -115,16 +132,32 @@ for fl in files:
         elif fl["id"] not in {a["file_id"] for a in c["attachments"]}:
             errors.append(f"[첨부] file {fl['id']} ↔ card {cid}: 카드 쪽 attachments에 없음")
 
+user_by = {u["id"]: u for u in users}
+for h in handovers:
+    for key in ("from_user_id", "to_user_id"):
+        if h[key] not in user_by:
+            errors.append(f"[인수인계] {h['id']}: 없는 사용자 {h[key]}")
+    if h["from_user_id"] == h["to_user_id"]:
+        errors.append(f"[인수인계] {h['id']}: 넘기는 사람과 받는 사람이 같다")
+    for pid in h["scope"]["project_ids"]:
+        if pid not in proj:
+            errors.append(f"[인수인계] {h['id']}: 없는 프로젝트 {pid}")
+    for cid in h["card_ids"]:
+        c = card_by.get(cid)
+        if not c or c["kind"] != "handover":
+            errors.append(f"[인수인계] {h['id']}: {cid}는 인수인계 카드(kind=handover)여야 한다")
+    for r in h["reviews"]:
+        if r["card_id"] not in h["card_ids"]:
+            errors.append(f"[인수인계] {h['id']}: 확인 표시의 카드 {r['card_id']}가 묶음에 없음")
+        if r["state"] == "question" and not r["comment"]:
+            errors.append(f"[인수인계] {h['id']}: 질문 있음에는 comment가 필요하다")
+
 for j in judgments:
-    if j["project_id"] not in proj:
-        errors.append(f"[참조] judgment {j['id']}: 없는 프로젝트")
     for m in j["matched_cards"]:
         c = card_by.get(m["card_id"])
         if not c:
             errors.append(f"[판정] {j['id']}: 없는 카드 {m['card_id']}")
             continue
-        if c["project_id"] != j["project_id"]:
-            errors.append(f"[판정] {j['id']}: 다른 프로젝트의 카드 {c['id']}")
         rel = m["relation"]
         want = {"active_decision": "active", "deprecated_decision": "deprecated", "superseded_decision": "superseded"}
         if rel in want and c["status"] != want[rel]:
@@ -135,9 +168,8 @@ for j in judgments:
 # 프로젝트별로 화면에 필요한 다양성이 있는지
 for p in projects:
     cs = [c for c in cards if c["project_id"] == p["id"]]
-    vs = {j["verdict"] for j in judgments if j["project_id"] == p["id"]}
     st = {c["status"] for c in cs}
-    print(f"  {p['id']}: 카드 {len(cs)}장, 상태 {sorted(st)}, 판정 {sorted(vs)}, "
+    print(f"  {p['id']}: 카드 {len(cs)}장 (업무 기록 {sum(c['kind'] == 'work' for c in cs)}, 인수인계 {sum(c['kind'] == 'handover' for c in cs)}), 상태 {sorted(st)}, "
           f"확인 필요 {sum(c['needs_review'] for c in cs)}장, 대체 쌍 {sum(1 for c in cs if c['status'] == 'superseded')}쌍")
 all_verdicts = {j["verdict"] for j in judgments}
 if all_verdicts != {"match", "conflict", "rejected", "unrelated"}:
@@ -151,4 +183,4 @@ if errors:
     for e in errors:
         print(" -", e)
     sys.exit(1)
-print(f"\n통과: 프로젝트 {len(projects)} · 로그 {len(logs)} · 카드 {len(cards)} · 파일 {len(files)} · 판정 {len(judgments)}")
+print(f"\n통과: 프로젝트 {len(projects)} · 로그 {len(logs)} · 카드 {len(cards)} · 파일 {len(files)} · 판정 {len(judgments)} · 사용자 {len(users)} · 인수인계 {len(handovers)}")

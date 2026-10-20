@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "user.schema.json",
+  "title": "User",
+  "description": "사용자. 인계자/후임자는 계정의 종류가 아니라 인수인계 한 건에서 맡는 입장이다(handovers의 from_user_id / to_user_id). 목업은 데모 계정으로 입장한다.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "title",
+    "is_synthetic"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^user_[a-z0-9_]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "is_synthetic": {
+      "type": "boolean"
+    }
+  }
+}

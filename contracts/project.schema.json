@@ -2,16 +2,36 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "project.schema.json",
   "title": "Project",
-  "description": "카드 덱의 단위. 인수인계는 프로젝트의 덱을 넘겨주는 일이다.",
+  "description": "카드의 속성(이름표). 화면에서 고르는 단위가 아니다.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "description", "domain", "is_default", "is_synthetic"],
+  "required": [
+    "id",
+    "name",
+    "description",
+    "domain",
+    "is_synthetic"
+  ],
   "properties": {
-    "id": { "type": "string", "pattern": "^proj_[a-z0-9_]+$" },
-    "name": { "type": "string", "minLength": 1 },
-    "description": { "type": "string" },
-    "domain": { "enum": ["marketing", "engineering"] },
-    "is_default": { "type": "boolean", "description": "화면에서 처음 선택되는 프로젝트(우선 시나리오)" },
-    "is_synthetic": { "type": "boolean" }
+    "id": {
+      "type": "string",
+      "pattern": "^proj_[a-z0-9_]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "domain": {
+      "enum": [
+        "marketing",
+        "engineering"
+      ]
+    },
+    "is_synthetic": {
+      "type": "boolean"
+    }
   }
 }

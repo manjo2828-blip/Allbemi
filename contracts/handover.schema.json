@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "handover.schema.json",
+  "title": "Handover",
+  "description": "인수인계 묶음. 업무 기록 카드에서 만든 인수인계 카드들과 인수자 메모, 후임자의 확인 표시를 묶는다.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "from_user_id",
+    "to_user_id",
+    "scope",
+    "status",
+    "memo",
+    "card_ids",
+    "reviews",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ho_[a-z0-9_]+$"
+    },
+    "from_user_id": {
+      "type": "string",
+      "pattern": "^user_[a-z0-9_]+$"
+    },
+    "to_user_id": {
+      "type": "string",
+      "pattern": "^user_[a-z0-9_]+$"
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "project_ids",
+        "from",
+        "to"
+      ],
+      "description": "인계 범위: 포함할 프로젝트와 기간",
+      "properties": {
+        "project_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^proj_[a-z0-9_]+$"
+          }
+        },
+        "from": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "to": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "submitted",
+        "in_review",
+        "done"
+      ],
+      "description": "작성 중 / 인계 완료 / 후임자 확인 중 / 확인 끝"
+    },
+    "memo": {
+      "type": "string",
+      "description": "인수자 메모"
+    },
+    "card_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^card_[a-z0-9_]+$"
+      },
+      "description": "인수인계 카드(kind=handover)만"
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "card_id",
+          "state",
+          "comment"
+        ],
+        "properties": {
+          "card_id": {
+            "type": "string",
+            "pattern": "^card_[a-z0-9_]+$"
+          },
+          "state": {
+            "enum": [
+              "understood",
+              "question"
+            ]
+          },
+          "comment": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

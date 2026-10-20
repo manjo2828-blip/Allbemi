@@ -48,6 +48,37 @@
         "file_id": "file_m03",
         "note": "런칭 캠페인 전체 기획안"
       }
+    ],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": [
+      {
+        "type": "attempt",
+        "text": "릴스가 20대 초반에게 도달이 제일 좋다고 제안",
+        "evidence": {
+          "log_id": "log_m01",
+          "message_index": 0,
+          "quote": "릴스가 제일 도달이 좋더라고요"
+        }
+      },
+      {
+        "type": "failure",
+        "text": "유튜브 롱폼은 제작비와 기간이 커서, 틱톡은 브랜드 톤이 안 맞아서 제외",
+        "evidence": {
+          "log_id": "log_m01",
+          "message_index": 1,
+          "quote": "제작비랑 기간이 너무 커요"
+        }
+      },
+      {
+        "type": "decision",
+        "text": "주 채널을 인스타그램 릴스로 확정",
+        "evidence": {
+          "log_id": "log_m01",
+          "message_index": 2,
+          "quote": "주 채널은 인스타그램 릴스로 가죠"
+        }
+      }
     ]
   },
   {
@@ -95,7 +126,10 @@
         "file_id": "file_m01",
         "note": "지난 가을 캠페인 성과 리포트"
       }
-    ]
+    ],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_m03",
@@ -123,7 +157,10 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_m04",
@@ -165,7 +202,10 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_m05",
@@ -193,7 +233,10 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_m06",
@@ -235,7 +278,10 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_m07",
@@ -282,7 +328,10 @@
         "file_id": "file_m03",
         "note": "예산 배분표가 포함된 기획안"
       }
-    ]
+    ],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_m08",
@@ -310,7 +359,10 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_m09",
@@ -357,7 +409,10 @@
         "file_id": "file_m02",
         "note": "슬로건이 반영된 브랜드 가이드"
       }
-    ]
+    ],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_m10",
@@ -394,7 +449,10 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_m11",
@@ -431,7 +489,10 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_d01",
@@ -478,6 +539,37 @@
         "file_id": "file_d01",
         "note": "저장소 후보 비교 검토 자료"
       }
+    ],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": [
+      {
+        "type": "attempt",
+        "text": "운영 경험이 있어 PostgreSQL로 가려 함",
+        "evidence": {
+          "log_id": "log_d01",
+          "message_index": 0,
+          "quote": "PostgreSQL로 가려고 합니다"
+        }
+      },
+      {
+        "type": "failure",
+        "text": "MongoDB도 검토했으나 스키마 변경이 잦지 않고 조인 쿼리가 많아 이점이 작아 제외",
+        "evidence": {
+          "log_id": "log_d01",
+          "message_index": 1,
+          "quote": "조인 쿼리가 많아서 이점이 작아요"
+        }
+      },
+      {
+        "type": "decision",
+        "text": "로그 저장소를 PostgreSQL로 확정",
+        "evidence": {
+          "log_id": "log_d01",
+          "message_index": 2,
+          "quote": "로그 저장소는 PostgreSQL로 확정하죠"
+        }
+      }
     ]
   },
   {
@@ -506,7 +598,20 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": [
+      {
+        "type": "decision",
+        "text": "검색을 Elasticsearch로 붙이기로 함",
+        "evidence": {
+          "log_id": "log_d02",
+          "message_index": 0,
+          "quote": "검색은 Elasticsearch로 붙이겠습니다"
+        }
+      }
+    ]
   },
   {
     "id": "card_d03",
@@ -543,6 +648,28 @@
       {
         "file_id": "file_d02",
         "note": "OpenSearch 전환 계획"
+      }
+    ],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": [
+      {
+        "type": "blocker",
+        "text": "Elasticsearch 라이선스 이슈가 확인됨",
+        "evidence": {
+          "log_id": "log_d03",
+          "message_index": 0,
+          "quote": "Elasticsearch 라이선스 이슈가 있어서"
+        }
+      },
+      {
+        "type": "reversal",
+        "text": "검색 엔진을 OpenSearch로 바꾸기로 번복",
+        "evidence": {
+          "log_id": "log_d03",
+          "message_index": 0,
+          "quote": "OpenSearch로 바꾸기로 했습니다"
+        }
       }
     ]
   },
@@ -586,7 +713,29 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": [
+      {
+        "type": "failure",
+        "text": "상시 배포는 롤백 부담이 커서 이번에는 제외",
+        "evidence": {
+          "log_id": "log_d04",
+          "message_index": 0,
+          "quote": "상시 배포는 롤백 부담이 커서"
+        }
+      },
+      {
+        "type": "decision",
+        "text": "배포를 매주 목요일로 정함",
+        "evidence": {
+          "log_id": "log_d04",
+          "message_index": 0,
+          "quote": "배포는 매주 목요일로 정합니다"
+        }
+      }
+    ]
   },
   {
     "id": "card_d05",
@@ -628,7 +777,29 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": [
+      {
+        "type": "failure",
+        "text": "이메일 알림은 놓치는 경우가 많았음",
+        "evidence": {
+          "log_id": "log_d05",
+          "message_index": 0,
+          "quote": "이메일은 놓치는 경우가 많았어요"
+        }
+      },
+      {
+        "type": "decision",
+        "text": "장애 알림을 슬랙으로 받기로 함",
+        "evidence": {
+          "log_id": "log_d05",
+          "message_index": 0,
+          "quote": "알림은 이메일 말고 슬랙으로 받죠"
+        }
+      }
+    ]
   },
   {
     "id": "card_d06",
@@ -665,7 +836,10 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": []
   },
   {
     "id": "card_d07",
@@ -707,6 +881,274 @@
         ]
       }
     ],
-    "attachments": []
+    "attachments": [],
+    "kind": "work",
+    "source_card_ids": [],
+    "process": [
+      {
+        "type": "failure",
+        "text": "세션 쿠키는 서버를 늘릴 때 세션 공유가 부담",
+        "evidence": {
+          "log_id": "log_d07",
+          "message_index": 0,
+          "quote": "서버를 늘릴 때 세션 공유가 부담이라서요"
+        }
+      },
+      {
+        "type": "decision",
+        "text": "API 인증을 JWT로 정함",
+        "evidence": {
+          "log_id": "log_d07",
+          "message_index": 0,
+          "quote": "API 인증은 JWT로 가고"
+        }
+      }
+    ]
+  },
+  {
+    "id": "card_h01",
+    "project_id": "proj_dev",
+    "kind": "handover",
+    "topic": "log_storage",
+    "decision": "로그 저장소는 PostgreSQL이다. MongoDB 도입은 검토 후 제외했으니 다시 꺼내지 않는다",
+    "rationale": "운영 경험이 있고 조인 쿼리 요구가 많다. 스키마 변경이 잦지 않아 MongoDB의 이점이 작다",
+    "rejected_alternatives": [
+      {
+        "option": "MongoDB",
+        "reason_rejected": "스키마 변경이 잦지 않고 조인 쿼리가 많아 이점이 작음"
+      }
+    ],
+    "owner": "박민준",
+    "decided_at": "2026-06-10T01:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "human_edited",
+    "evidence": [
+      {
+        "log_id": "log_d01",
+        "message_index": 2,
+        "quote": "로그 저장소는 PostgreSQL로 확정하죠",
+        "span": [
+          3,
+          27
+        ]
+      },
+      {
+        "log_id": "log_d01",
+        "message_index": 1,
+        "quote": "조인 쿼리가 많아서 이점이 작아요",
+        "span": [
+          29,
+          47
+        ]
+      }
+    ],
+    "attachments": [
+      {
+        "file_id": "file_d01",
+        "note": "저장소 후보 비교 검토 자료"
+      }
+    ],
+    "process": [],
+    "source_card_ids": [
+      "card_d01"
+    ]
+  },
+  {
+    "id": "card_h02",
+    "project_id": "proj_dev",
+    "kind": "handover",
+    "topic": "search_engine",
+    "decision": "로그 검색은 OpenSearch를 쓴다 (Elasticsearch에서 변경)",
+    "rationale": "Elasticsearch 라이선스 정책 리스크를 피한다. 전환 계획은 첨부 자료 참고",
+    "rejected_alternatives": [
+      {
+        "option": "Elasticsearch",
+        "reason_rejected": "라이선스 정책 리스크"
+      }
+    ],
+    "owner": "박민준",
+    "decided_at": "2026-06-10T01:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "human_edited",
+    "evidence": [
+      {
+        "log_id": "log_d03",
+        "message_index": 0,
+        "quote": "OpenSearch로 바꾸기로 했습니다",
+        "span": [
+          27,
+          48
+        ]
+      },
+      {
+        "log_id": "log_d02",
+        "message_index": 0,
+        "quote": "검색은 Elasticsearch로 붙이겠습니다",
+        "span": [
+          0,
+          25
+        ]
+      }
+    ],
+    "attachments": [
+      {
+        "file_id": "file_d02",
+        "note": "OpenSearch 전환 계획"
+      }
+    ],
+    "process": [],
+    "source_card_ids": [
+      "card_d03",
+      "card_d02"
+    ]
+  },
+  {
+    "id": "card_h03",
+    "project_id": "proj_dev",
+    "kind": "handover",
+    "topic": "deploy_cadence",
+    "decision": "배포는 매주 목요일에 한다. 상시 배포는 하지 않는다",
+    "rationale": "배포 일정을 예측 가능하게 한다. 상시 배포는 롤백 부담이 커서 제외했다",
+    "rejected_alternatives": [
+      {
+        "option": "상시 배포",
+        "reason_rejected": "롤백 부담이 큼"
+      }
+    ],
+    "owner": "박민준",
+    "decided_at": "2026-06-10T01:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_drafted",
+    "evidence": [
+      {
+        "log_id": "log_d04",
+        "message_index": 0,
+        "quote": "배포는 매주 목요일로 정합니다",
+        "span": [
+          0,
+          16
+        ]
+      },
+      {
+        "log_id": "log_d04",
+        "message_index": 0,
+        "quote": "상시 배포는 롤백 부담이 커서",
+        "span": [
+          18,
+          34
+        ]
+      }
+    ],
+    "attachments": [],
+    "process": [],
+    "source_card_ids": [
+      "card_d04"
+    ]
+  },
+  {
+    "id": "card_h04",
+    "project_id": "proj_dev",
+    "kind": "handover",
+    "topic": "alert_channel",
+    "decision": "장애 알림은 슬랙으로 받는다. 이메일 알림은 쓰지 않는다",
+    "rationale": "알림을 놓치는 일을 줄인다. 이메일은 놓치는 경우가 많았다",
+    "rejected_alternatives": [
+      {
+        "option": "이메일 알림",
+        "reason_rejected": "놓치는 경우가 많음"
+      }
+    ],
+    "owner": "박민준",
+    "decided_at": "2026-06-10T01:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_drafted",
+    "evidence": [
+      {
+        "log_id": "log_d05",
+        "message_index": 0,
+        "quote": "알림은 이메일 말고 슬랙으로 받죠",
+        "span": [
+          0,
+          18
+        ]
+      },
+      {
+        "log_id": "log_d05",
+        "message_index": 0,
+        "quote": "이메일은 놓치는 경우가 많았어요",
+        "span": [
+          20,
+          37
+        ]
+      }
+    ],
+    "attachments": [],
+    "process": [],
+    "source_card_ids": [
+      "card_d05"
+    ]
+  },
+  {
+    "id": "card_h05",
+    "project_id": "proj_dev",
+    "kind": "handover",
+    "topic": "api_auth",
+    "decision": "API 인증은 JWT를 쓴다. 세션 쿠키는 쓰지 않는다",
+    "rationale": "서버를 늘릴 때 세션 공유 부담을 피한다",
+    "rejected_alternatives": [
+      {
+        "option": "세션 쿠키",
+        "reason_rejected": "서버 확장 시 세션 공유 부담"
+      }
+    ],
+    "owner": "박민준",
+    "decided_at": "2026-06-10T01:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_drafted",
+    "evidence": [
+      {
+        "log_id": "log_d07",
+        "message_index": 0,
+        "quote": "API 인증은 JWT로 가고",
+        "span": [
+          0,
+          15
+        ]
+      },
+      {
+        "log_id": "log_d07",
+        "message_index": 0,
+        "quote": "서버를 늘릴 때 세션 공유가 부담이라서요",
+        "span": [
+          30,
+          52
+        ]
+      }
+    ],
+    "attachments": [],
+    "process": [],
+    "source_card_ids": [
+      "card_d07"
+    ]
   }
 ]

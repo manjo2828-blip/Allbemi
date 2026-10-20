@@ -1,0 +1,14 @@
+[
+  {
+    "id": "user_minjun",
+    "name": "박민준",
+    "title": "백엔드 개발자",
+    "is_synthetic": true
+  },
+  {
+    "id": "user_seoyeon",
+    "name": "이서연",
+    "title": "개발자",
+    "is_synthetic": true
+  }
+]

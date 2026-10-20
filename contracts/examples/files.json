@@ -52,7 +52,8 @@
     "uploaded_at": "2026-03-10T09:00:00Z",
     "note": "저장소 후보 비교 검토 자료",
     "linked_card_ids": [
-      "card_d01"
+      "card_d01",
+      "card_h01"
     ],
     "is_synthetic": true
   },
@@ -66,7 +67,8 @@
     "uploaded_at": "2026-06-02T09:00:00Z",
     "note": "OpenSearch 전환 일정과 영향 범위",
     "linked_card_ids": [
-      "card_d03"
+      "card_d03",
+      "card_h02"
     ],
     "is_synthetic": true
   }

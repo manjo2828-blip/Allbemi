@@ -4,7 +4,6 @@
     "name": "여름 신제품 런칭 캠페인",
     "description": "마케팅팀 · 합성 예시 프로젝트 (우선 시나리오)",
     "domain": "marketing",
-    "is_default": true,
     "is_synthetic": true
   },
   {
@@ -12,7 +11,6 @@
     "name": "로그 시스템 개편",
     "description": "개발팀 · 합성 예시 프로젝트 (MongoDB 시나리오)",
     "domain": "engineering",
-    "is_default": false,
     "is_synthetic": true
   }
 ]

@@ -6,58 +6,187 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "id", "project_id", "intent", "verdict", "matched_cards",
-    "rejected_reason", "confidence", "needs_review", "explanation"
+    "id",
+    "intent",
+    "verdict",
+    "matched_cards",
+    "rejected_reason",
+    "confidence",
+    "needs_review",
+    "explanation",
+    "scope"
   ],
   "properties": {
-    "id": { "type": "string", "pattern": "^judg_[a-z0-9_]+$" },
-    "project_id": { "type": "string", "pattern": "^proj_[a-z0-9_]+$" },
+    "id": {
+      "type": "string",
+      "pattern": "^judg_[a-z0-9_]+$"
+    },
+    "scope": {
+      "enum": [
+        "all",
+        "work",
+        "handover"
+      ],
+      "description": "검색 범위. 기본 all(두 종류 카드 모두). 프로젝트는 고르지 않고 카드의 속성으로만 존재한다."
+    },
     "intent": {
       "type": "object",
       "description": "사용자가 하려는 일을 구조화한 것. 화면 왼쪽 '내 입력 카드'와 검색 질의 재작성의 결과.",
       "additionalProperties": false,
-      "required": ["text", "topic", "proposed_option"],
+      "required": [
+        "text",
+        "topic",
+        "proposed_option"
+      ],
       "properties": {
-        "text": { "type": "string", "minLength": 1 },
-        "topic": { "type": "string", "pattern": "^[a-z0-9_]+$" },
-        "proposed_option": { "type": ["string", "null"], "description": "제안하는 선택지. 없으면 null" }
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "topic": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "proposed_option": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "제안하는 선택지. 없으면 null"
+        }
       }
     },
-    "verdict": { "enum": ["match", "conflict", "rejected", "unrelated"] },
+    "verdict": {
+      "enum": [
+        "match",
+        "conflict",
+        "rejected",
+        "unrelated"
+      ]
+    },
     "matched_cards": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["card_id", "relation", "evidence_quote"],
+        "required": [
+          "card_id",
+          "relation",
+          "evidence_quote"
+        ],
         "properties": {
-          "card_id": { "type": "string", "pattern": "^card_[a-z0-9_]+$" },
-          "relation": { "enum": ["active_decision", "rejected_alternative", "deprecated_decision", "superseded_decision"] },
-          "evidence_quote": { "type": "string", "minLength": 1, "description": "판정 근거가 되는 카드·로그의 문장" }
+          "card_id": {
+            "type": "string",
+            "pattern": "^card_[a-z0-9_]+$"
+          },
+          "relation": {
+            "enum": [
+              "active_decision",
+              "rejected_alternative",
+              "deprecated_decision",
+              "superseded_decision"
+            ]
+          },
+          "evidence_quote": {
+            "type": "string",
+            "minLength": 1,
+            "description": "판정 근거가 되는 카드·로그의 문장"
+          }
         }
       }
     },
-    "rejected_reason": { "type": ["string", "null"], "description": "verdict가 rejected일 때 기각 이유" },
-    "confidence": { "enum": ["high", "medium", "low"] },
-    "needs_review": { "type": "boolean" },
-    "explanation": { "type": "string", "minLength": 1, "description": "한두 문장 설명. 근거 카드를 인용한다." }
+    "rejected_reason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "verdict가 rejected일 때 기각 이유"
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "needs_review": {
+      "type": "boolean"
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 1,
+      "description": "한두 문장 설명. 근거 카드를 인용한다."
+    }
   },
   "allOf": [
     {
-      "if": { "properties": { "verdict": { "enum": ["match", "conflict", "rejected"] } } },
-      "then": { "properties": { "matched_cards": { "minItems": 1 } } }
+      "if": {
+        "properties": {
+          "verdict": {
+            "enum": [
+              "match",
+              "conflict",
+              "rejected"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "matched_cards": {
+            "minItems": 1
+          }
+        }
+      }
     },
     {
-      "if": { "properties": { "verdict": { "const": "unrelated" } } },
-      "then": { "properties": { "matched_cards": { "maxItems": 0 } } }
+      "if": {
+        "properties": {
+          "verdict": {
+            "const": "unrelated"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "matched_cards": {
+            "maxItems": 0
+          }
+        }
+      }
     },
     {
-      "if": { "properties": { "verdict": { "const": "rejected" } } },
-      "then": { "properties": { "rejected_reason": { "type": "string", "minLength": 1 } } }
+      "if": {
+        "properties": {
+          "verdict": {
+            "const": "rejected"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "rejected_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
     },
     {
-      "if": { "properties": { "confidence": { "const": "low" } } },
-      "then": { "properties": { "needs_review": { "const": true } } }
+      "if": {
+        "properties": {
+          "confidence": {
+            "const": "low"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "needs_review": {
+            "const": true
+          }
+        }
+      }
     }
   ]
 }

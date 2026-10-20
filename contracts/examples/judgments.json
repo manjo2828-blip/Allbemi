@@ -1,7 +1,7 @@
 [
   {
     "id": "judg_m01",
-    "project_id": "proj_marketing",
+    "scope": "all",
     "intent": {
       "text": "메가 인플루언서 한 명 섭외해 볼까",
       "topic": "influencer_selection",
@@ -22,7 +22,7 @@
   },
   {
     "id": "judg_m02",
-    "project_id": "proj_marketing",
+    "scope": "all",
     "intent": {
       "text": "마이크로 인플루언서 10명 추가 계약하자",
       "topic": "influencer_selection",
@@ -43,7 +43,7 @@
   },
   {
     "id": "judg_m03",
-    "project_id": "proj_marketing",
+    "scope": "all",
     "intent": {
       "text": "런칭일을 7월 첫째 주로 미루자",
       "topic": "launch_date",
@@ -64,7 +64,7 @@
   },
   {
     "id": "judg_m04",
-    "project_id": "proj_marketing",
+    "scope": "all",
     "intent": {
       "text": "런칭 주에 20% 쿠폰 뿌리자",
       "topic": "promotion_coupon",
@@ -90,7 +90,7 @@
   },
   {
     "id": "judg_m05",
-    "project_id": "proj_marketing",
+    "scope": "all",
     "intent": {
       "text": "성과 보고서에 클릭률도 같이 보여주자",
       "topic": "kpi_metric",
@@ -111,7 +111,7 @@
   },
   {
     "id": "judg_m06",
-    "project_id": "proj_marketing",
+    "scope": "all",
     "intent": {
       "text": "사무실 에어컨 온도 낮춰 달라고 요청하자",
       "topic": "office_facility",
@@ -126,7 +126,7 @@
   },
   {
     "id": "judg_d01",
-    "project_id": "proj_dev",
+    "scope": "all",
     "intent": {
       "text": "로그 검색용으로 MongoDB 도입해 볼까",
       "topic": "log_storage",
@@ -138,6 +138,11 @@
         "card_id": "card_d01",
         "relation": "rejected_alternative",
         "evidence_quote": "조인 쿼리가 많아서 이점이 작아요"
+      },
+      {
+        "card_id": "card_h01",
+        "relation": "rejected_alternative",
+        "evidence_quote": "MongoDB: 스키마 변경이 잦지 않고 조인 쿼리가 많아 이점이 작음"
       }
     ],
     "rejected_reason": "스키마 변경이 잦지 않고 조인 쿼리가 많아 이점이 작음",
@@ -147,7 +152,7 @@
   },
   {
     "id": "judg_d02",
-    "project_id": "proj_dev",
+    "scope": "all",
     "intent": {
       "text": "로그 테이블 인덱스를 튜닝하자",
       "topic": "log_storage",
@@ -168,7 +173,7 @@
   },
   {
     "id": "judg_d03",
-    "project_id": "proj_dev",
+    "scope": "all",
     "intent": {
       "text": "로그 보관 기간을 1년으로 늘리자",
       "topic": "log_retention",
