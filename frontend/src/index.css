@@ -1,0 +1,57 @@
+@import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
+@import "tailwindcss";
+
+/*
+ * Allbemi 디자인 토큰 — 아이보리 바탕 + 진한 브라운 테두리 (팔레트 안 A)
+ * 색은 여기 한 곳에서만 정의하고, 컴포넌트는 bg-page · border-line 같은 이름으로만 쓴다.
+ */
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  /* 바탕과 면 */
+  --color-page: #f8f2e4;       /* 페이지 바탕 (아이보리) */
+  --color-surface: #fffcf5;    /* 카드·상단바 면 */
+  --color-sidebar: #f0e6d0;    /* 사이드바 면 */
+  --color-selected: #e3d2b3;   /* 선택된 메뉴·강조 면 */
+  --color-soft: #cdb794;       /* 연한 구분선·보조 면 */
+
+  /* 테두리 */
+  --color-line: #7a5a3e;       /* 기본 갈색 테두리 */
+  --color-line-soft: #d9c8a8;  /* 약한 테두리 */
+
+  /* 글자 */
+  --color-ink: #3a2a1e;        /* 본문 */
+  --color-muted: #7b6a5a;      /* 보조 문구 */
+  --color-brand: #7a4e2d;      /* 강조(링크·버튼) */
+  --color-brand-hover: #5f3b20;
+  --color-on-brand: #fffcf5;
+
+  /* 상태·판정 (색만으로 구분하지 않고 아이콘·글자를 함께 쓴다) */
+  --color-active: #4f7a4a;         --color-active-bg: #e4eedf;     --color-active-ink: #2f5a2b;
+  --color-rejected: #a8392b;       --color-rejected-bg: #f6ddd8;   --color-rejected-ink: #7a2418;
+  --color-warn: #b7791f;           --color-warn-bg: #f5e6c8;       --color-warn-ink: #6b4510;
+  --color-superseded: #3f7a80;     --color-superseded-bg: #dcebec; --color-superseded-ink: #1f4f55;
+  --color-neutral: #8a8378;        --color-neutral-bg: #ece7de;    --color-neutral-ink: #5e574d;
+
+  --radius-card: 0.75rem;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-page);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
+}
