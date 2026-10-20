@@ -1,0 +1,712 @@
+[
+  {
+    "id": "card_m01",
+    "project_id": "proj_marketing",
+    "topic": "main_channel",
+    "decision": "주 채널을 인스타그램 릴스로 한다",
+    "rationale": "타깃(20대 초반)에게 도달률이 가장 높다",
+    "rejected_alternatives": [
+      {
+        "option": "유튜브 롱폼",
+        "reason_rejected": "제작비와 제작 기간 부담이 큼"
+      },
+      {
+        "option": "틱톡",
+        "reason_rejected": "브랜드 톤과 맞지 않음"
+      }
+    ],
+    "owner": "김서윤",
+    "decided_at": "2026-04-08T03:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_m01",
+        "message_index": 2,
+        "quote": "주 채널은 인스타그램 릴스로 가죠",
+        "span": [
+          3,
+          21
+        ]
+      },
+      {
+        "log_id": "log_m01",
+        "message_index": 1,
+        "quote": "제작비랑 기간이 너무 커요",
+        "span": [
+          14,
+          28
+        ]
+      }
+    ],
+    "attachments": [
+      {
+        "file_id": "file_m03",
+        "note": "런칭 캠페인 전체 기획안"
+      }
+    ]
+  },
+  {
+    "id": "card_m02",
+    "project_id": "proj_marketing",
+    "topic": "influencer_selection",
+    "decision": "인플루언서는 팔로워 1만~10만의 마이크로 인플루언서 위주로 계약한다",
+    "rationale": "지난 가을 캠페인에서 마이크로 인플루언서의 전환율이 더 높았다",
+    "rejected_alternatives": [
+      {
+        "option": "메가 인플루언서",
+        "reason_rejected": "단가 대비 전환율이 낮음 (지난 가을 캠페인 결과)"
+      }
+    ],
+    "owner": "김서윤",
+    "decided_at": "2026-04-15T03:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_m02",
+        "message_index": 2,
+        "quote": "마이크로 인플루언서 위주로 계약하죠",
+        "span": [
+          20,
+          39
+        ]
+      },
+      {
+        "log_id": "log_m02",
+        "message_index": 0,
+        "quote": "단가 대비 전환이 너무 낮았어요",
+        "span": [
+          27,
+          44
+        ]
+      }
+    ],
+    "attachments": [
+      {
+        "file_id": "file_m01",
+        "note": "지난 가을 캠페인 성과 리포트"
+      }
+    ]
+  },
+  {
+    "id": "card_m03",
+    "project_id": "proj_marketing",
+    "topic": "promotion_coupon",
+    "decision": "런칭 주에 20% 할인 쿠폰을 배포한다",
+    "rationale": "런칭 초기 구매 전환을 높이기 위해",
+    "rejected_alternatives": [],
+    "owner": "김서윤",
+    "decided_at": "2026-04-20T03:00:00Z",
+    "status": "superseded",
+    "supersedes": null,
+    "superseded_by": "card_m04",
+    "confidence": "medium",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_m03",
+        "message_index": 0,
+        "quote": "20% 할인 쿠폰을 배포하는 안으로 갑시다",
+        "span": [
+          6,
+          29
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_m04",
+    "project_id": "proj_marketing",
+    "topic": "promotion_coupon",
+    "decision": "런칭 주에는 할인 쿠폰 대신 구매 사은품을 증정한다",
+    "rationale": "신제품 가치 인식을 지키면서 구매 동기를 만든다",
+    "rejected_alternatives": [
+      {
+        "option": "20% 할인 쿠폰",
+        "reason_rejected": "신제품 가격 이미지 훼손 우려, 재무팀 반대"
+      }
+    ],
+    "owner": "김서윤",
+    "decided_at": "2026-05-02T03:00:00Z",
+    "status": "active",
+    "supersedes": "card_m03",
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "human_edited",
+    "evidence": [
+      {
+        "log_id": "log_m04",
+        "message_index": 1,
+        "quote": "쿠폰은 철회하고 사은품 증정으로 갑니다",
+        "span": [
+          3,
+          24
+        ]
+      },
+      {
+        "log_id": "log_m04",
+        "message_index": 0,
+        "quote": "재무팀도 반대했어요",
+        "span": [
+          29,
+          39
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_m05",
+    "project_id": "proj_marketing",
+    "topic": "launch_date",
+    "decision": "런칭일을 6월 10일로 한다",
+    "rationale": "시즌 시작에 맞춘 일정",
+    "rejected_alternatives": [],
+    "owner": "김서윤",
+    "decided_at": "2026-04-25T03:00:00Z",
+    "status": "superseded",
+    "supersedes": null,
+    "superseded_by": "card_m06",
+    "confidence": "medium",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_m05",
+        "message_index": 0,
+        "quote": "런칭일은 6월 10일로 확정합니다",
+        "span": [
+          0,
+          18
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_m06",
+    "project_id": "proj_marketing",
+    "topic": "launch_date",
+    "decision": "런칭일을 6월 17일로 변경한다",
+    "rationale": "공장 입고가 일주일 지연되어 재고 확보가 불가능해졌다",
+    "rejected_alternatives": [
+      {
+        "option": "6월 10일 유지",
+        "reason_rejected": "재고 확보가 불가능"
+      }
+    ],
+    "owner": "김서윤",
+    "decided_at": "2026-05-12T03:00:00Z",
+    "status": "active",
+    "supersedes": "card_m05",
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "human_edited",
+    "evidence": [
+      {
+        "log_id": "log_m06",
+        "message_index": 1,
+        "quote": "런칭일을 6월 17일로 변경합니다",
+        "span": [
+          3,
+          21
+        ]
+      },
+      {
+        "log_id": "log_m06",
+        "message_index": 0,
+        "quote": "6월 10일은 불가능합니다",
+        "span": [
+          17,
+          31
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_m07",
+    "project_id": "proj_marketing",
+    "topic": "ad_budget",
+    "decision": "광고 예산을 인스타그램 6 : 검색광고 3 : 오프라인 1로 배분한다",
+    "rationale": "도달 효율이 높은 채널에 집중한다",
+    "rejected_alternatives": [
+      {
+        "option": "오프라인 팝업 확대",
+        "reason_rejected": "비용 대비 효과가 불확실함"
+      }
+    ],
+    "owner": "이도현",
+    "decided_at": "2026-04-10T03:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_m07",
+        "message_index": 1,
+        "quote": "6:3:1로 확정",
+        "span": [
+          52,
+          61
+        ]
+      },
+      {
+        "log_id": "log_m07",
+        "message_index": 1,
+        "quote": "비용 대비 효과가 불확실해서",
+        "span": [
+          23,
+          38
+        ]
+      }
+    ],
+    "attachments": [
+      {
+        "file_id": "file_m03",
+        "note": "예산 배분표가 포함된 기획안"
+      }
+    ]
+  },
+  {
+    "id": "card_m08",
+    "project_id": "proj_marketing",
+    "topic": "slogan",
+    "decision": "슬로건을 '여름을 한 입에'로 한다",
+    "rationale": "제품 특징(한 입 크기)을 직관적으로 전달한다",
+    "rejected_alternatives": [],
+    "owner": "박지우",
+    "decided_at": "2026-05-05T03:00:00Z",
+    "status": "superseded",
+    "supersedes": null,
+    "superseded_by": "card_m09",
+    "confidence": "medium",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_m08",
+        "message_index": 0,
+        "quote": "슬로건 초안은 '여름을 한 입에'입니다",
+        "span": [
+          0,
+          21
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_m09",
+    "project_id": "proj_marketing",
+    "topic": "slogan",
+    "decision": "슬로건을 '한 입, 여름'으로 한다",
+    "rationale": "법무 검토에서 지적된 과장 표현 소지를 없앤다",
+    "rejected_alternatives": [
+      {
+        "option": "여름을 한 입에",
+        "reason_rejected": "법무 검토에서 과장 표현 소지가 지적됨"
+      }
+    ],
+    "owner": "박지우",
+    "decided_at": "2026-05-20T03:00:00Z",
+    "status": "active",
+    "supersedes": "card_m08",
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_m09",
+        "message_index": 1,
+        "quote": "'한 입, 여름'으로 바꾸겠습니다",
+        "span": [
+          3,
+          21
+        ]
+      },
+      {
+        "log_id": "log_m09",
+        "message_index": 0,
+        "quote": "과장 표현 소지가 있다고 합니다",
+        "span": [
+          16,
+          33
+        ]
+      }
+    ],
+    "attachments": [
+      {
+        "file_id": "file_m02",
+        "note": "슬로건이 반영된 브랜드 가이드"
+      }
+    ]
+  },
+  {
+    "id": "card_m10",
+    "project_id": "proj_marketing",
+    "topic": "kpi_metric",
+    "decision": "성과 지표는 클릭률보다 전환율을 중심으로 본다",
+    "rationale": "클릭률은 구매 의도를 충분히 반영하지 못한다 (근거 언급이 짧음)",
+    "rejected_alternatives": [],
+    "owner": "이도현",
+    "decided_at": "2026-05-22T03:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "low",
+    "needs_review": true,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_m10",
+        "message_index": 0,
+        "quote": "클릭률보다 전환 위주로 보는 게 좋겠어요",
+        "span": [
+          4,
+          26
+        ]
+      },
+      {
+        "log_id": "log_m10",
+        "message_index": 1,
+        "quote": "일단 그렇게 보죠",
+        "span": [
+          3,
+          12
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_m11",
+    "project_id": "proj_marketing",
+    "topic": "newsletter_frequency",
+    "decision": "뉴스레터를 주 2회 발송한다",
+    "rationale": "구독자 접점을 늘리기 위해",
+    "rejected_alternatives": [],
+    "owner": "박지우",
+    "decided_at": "2026-05-28T03:00:00Z",
+    "status": "deprecated",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_m11",
+        "message_index": 0,
+        "quote": "뉴스레터를 주 2회로 늘려서 보내 볼게요",
+        "span": [
+          0,
+          22
+        ]
+      },
+      {
+        "log_id": "log_m12",
+        "message_index": 0,
+        "quote": "수신 거부가 많이 늘었어요",
+        "span": [
+          11,
+          25
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_d01",
+    "project_id": "proj_dev",
+    "topic": "log_storage",
+    "decision": "로그 저장소로 PostgreSQL을 사용한다",
+    "rationale": "운영 경험이 있고 조인 쿼리 요구가 많다",
+    "rejected_alternatives": [
+      {
+        "option": "MongoDB",
+        "reason_rejected": "스키마 변경이 잦지 않고 조인 쿼리가 많아 이점이 작음"
+      }
+    ],
+    "owner": "박민준",
+    "decided_at": "2026-03-10T03:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_d01",
+        "message_index": 2,
+        "quote": "로그 저장소는 PostgreSQL로 확정하죠",
+        "span": [
+          3,
+          27
+        ]
+      },
+      {
+        "log_id": "log_d01",
+        "message_index": 1,
+        "quote": "조인 쿼리가 많아서 이점이 작아요",
+        "span": [
+          29,
+          47
+        ]
+      }
+    ],
+    "attachments": [
+      {
+        "file_id": "file_d01",
+        "note": "저장소 후보 비교 검토 자료"
+      }
+    ]
+  },
+  {
+    "id": "card_d02",
+    "project_id": "proj_dev",
+    "topic": "search_engine",
+    "decision": "로그 검색은 Elasticsearch로 한다",
+    "rationale": "전문 검색 요구를 충족한다",
+    "rejected_alternatives": [],
+    "owner": "박민준",
+    "decided_at": "2026-03-18T03:00:00Z",
+    "status": "superseded",
+    "supersedes": null,
+    "superseded_by": "card_d03",
+    "confidence": "medium",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_d02",
+        "message_index": 0,
+        "quote": "검색은 Elasticsearch로 붙이겠습니다",
+        "span": [
+          0,
+          25
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_d03",
+    "project_id": "proj_dev",
+    "topic": "search_engine",
+    "decision": "로그 검색을 OpenSearch로 변경한다",
+    "rationale": "Elasticsearch 라이선스 정책 리스크를 피한다",
+    "rejected_alternatives": [
+      {
+        "option": "Elasticsearch",
+        "reason_rejected": "라이선스 정책 리스크"
+      }
+    ],
+    "owner": "정우진",
+    "decided_at": "2026-06-02T03:00:00Z",
+    "status": "active",
+    "supersedes": "card_d02",
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "human_edited",
+    "evidence": [
+      {
+        "log_id": "log_d03",
+        "message_index": 0,
+        "quote": "OpenSearch로 바꾸기로 했습니다",
+        "span": [
+          27,
+          48
+        ]
+      }
+    ],
+    "attachments": [
+      {
+        "file_id": "file_d02",
+        "note": "OpenSearch 전환 계획"
+      }
+    ]
+  },
+  {
+    "id": "card_d04",
+    "project_id": "proj_dev",
+    "topic": "deploy_cadence",
+    "decision": "배포는 매주 목요일에 한다",
+    "rationale": "배포 일정을 예측 가능하게 한다",
+    "rejected_alternatives": [
+      {
+        "option": "상시 배포",
+        "reason_rejected": "롤백 부담이 큼"
+      }
+    ],
+    "owner": "정우진",
+    "decided_at": "2026-03-25T03:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_d04",
+        "message_index": 0,
+        "quote": "배포는 매주 목요일로 정합니다",
+        "span": [
+          0,
+          16
+        ]
+      },
+      {
+        "log_id": "log_d04",
+        "message_index": 0,
+        "quote": "상시 배포는 롤백 부담이 커서",
+        "span": [
+          18,
+          34
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_d05",
+    "project_id": "proj_dev",
+    "topic": "alert_channel",
+    "decision": "장애 알림은 슬랙으로 받는다",
+    "rationale": "알림을 놓치는 일을 줄인다",
+    "rejected_alternatives": [
+      {
+        "option": "이메일 알림",
+        "reason_rejected": "놓치는 경우가 많음"
+      }
+    ],
+    "owner": "박민준",
+    "decided_at": "2026-04-02T03:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_d05",
+        "message_index": 0,
+        "quote": "알림은 이메일 말고 슬랙으로 받죠",
+        "span": [
+          0,
+          18
+        ]
+      },
+      {
+        "log_id": "log_d05",
+        "message_index": 0,
+        "quote": "이메일은 놓치는 경우가 많았어요",
+        "span": [
+          20,
+          37
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_d06",
+    "project_id": "proj_dev",
+    "topic": "log_retention",
+    "decision": "로그 보관 기간은 90일로 한다",
+    "rationale": "임시 기준으로 보임 (근거 언급이 없음)",
+    "rejected_alternatives": [],
+    "owner": "정우진",
+    "decided_at": "2026-04-10T03:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "low",
+    "needs_review": true,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_d06",
+        "message_index": 0,
+        "quote": "로그 보관은 90일로 하면 될 듯",
+        "span": [
+          0,
+          18
+        ]
+      },
+      {
+        "log_id": "log_d06",
+        "message_index": 1,
+        "quote": "일단 그렇게 가죠",
+        "span": [
+          0,
+          9
+        ]
+      }
+    ],
+    "attachments": []
+  },
+  {
+    "id": "card_d07",
+    "project_id": "proj_dev",
+    "topic": "api_auth",
+    "decision": "API 인증은 JWT를 사용한다",
+    "rationale": "서버 확장 시 세션 공유 부담을 피한다",
+    "rejected_alternatives": [
+      {
+        "option": "세션 쿠키",
+        "reason_rejected": "서버 확장 시 세션 공유 부담"
+      }
+    ],
+    "owner": "정우진",
+    "decided_at": "2026-04-18T03:00:00Z",
+    "status": "active",
+    "supersedes": null,
+    "superseded_by": null,
+    "confidence": "high",
+    "needs_review": false,
+    "origin": "ai_extracted",
+    "evidence": [
+      {
+        "log_id": "log_d07",
+        "message_index": 0,
+        "quote": "API 인증은 JWT로 가고",
+        "span": [
+          0,
+          15
+        ]
+      },
+      {
+        "log_id": "log_d07",
+        "message_index": 0,
+        "quote": "서버를 늘릴 때 세션 공유가 부담이라서요",
+        "span": [
+          30,
+          52
+        ]
+      }
+    ],
+    "attachments": []
+  }
+]

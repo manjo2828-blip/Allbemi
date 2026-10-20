@@ -1,0 +1,348 @@
+[
+  {
+    "id": "log_m01",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#launch-plan",
+    "occurred_at": "2026-04-08T00:12:00Z",
+    "messages": [
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-04-08T00:12:00Z",
+        "text": "채널 얘기해 봅시다. 타깃이 20대 초반이라 릴스가 제일 도달이 좋더라고요."
+      },
+      {
+        "speaker": "이도현",
+        "sent_at": "2026-04-08T00:15:00Z",
+        "text": "유튜브 롱폼도 검토했는데 제작비랑 기간이 너무 커요. 틱톡은 브랜드 톤이랑 안 맞아서 뺐습니다."
+      },
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-04-08T00:20:00Z",
+        "text": "그럼 주 채널은 인스타그램 릴스로 가죠. 확정."
+      }
+    ]
+  },
+  {
+    "id": "log_m02",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#influencer",
+    "occurred_at": "2026-04-15T05:02:00Z",
+    "messages": [
+      {
+        "speaker": "이도현",
+        "sent_at": "2026-04-15T05:02:00Z",
+        "text": "지난 가을 캠페인 결과 보니까 메가 인플루언서는 단가 대비 전환이 너무 낮았어요. 리포트 올려둘게요."
+      },
+      {
+        "speaker": "박지우",
+        "sent_at": "2026-04-15T05:10:00Z",
+        "text": "마이크로 인플루언서 여러 명이 전환율이 훨씬 높았네요."
+      },
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-04-15T05:18:00Z",
+        "text": "이번엔 팔로워 1만에서 10만 사이 마이크로 인플루언서 위주로 계약하죠."
+      }
+    ]
+  },
+  {
+    "id": "log_m03",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#promotion",
+    "occurred_at": "2026-04-20T02:05:00Z",
+    "messages": [
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-04-20T02:05:00Z",
+        "text": "런칭 주에 20% 할인 쿠폰을 배포하는 안으로 갑시다."
+      },
+      {
+        "speaker": "최민아",
+        "sent_at": "2026-04-20T02:08:00Z",
+        "text": "알겠습니다. 쿠폰 코드는 제가 만들어 둘게요."
+      }
+    ]
+  },
+  {
+    "id": "log_m04",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#promotion",
+    "occurred_at": "2026-05-02T01:30:00Z",
+    "messages": [
+      {
+        "speaker": "최민아",
+        "sent_at": "2026-05-02T01:30:00Z",
+        "text": "쿠폰은 가격 이미지에 안 좋다는 의견이 계속 나왔고 재무팀도 반대했어요."
+      },
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-05-02T01:41:00Z",
+        "text": "그럼 쿠폰은 철회하고 사은품 증정으로 갑니다."
+      }
+    ]
+  },
+  {
+    "id": "log_m05",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#launch-plan",
+    "occurred_at": "2026-04-25T07:00:00Z",
+    "messages": [
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-04-25T07:00:00Z",
+        "text": "런칭일은 6월 10일로 확정합니다."
+      },
+      {
+        "speaker": "최민아",
+        "sent_at": "2026-04-25T07:04:00Z",
+        "text": "공장 일정은 제가 다시 확인해 볼게요."
+      }
+    ]
+  },
+  {
+    "id": "log_m06",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#launch-plan",
+    "occurred_at": "2026-05-12T00:40:00Z",
+    "messages": [
+      {
+        "speaker": "박지우",
+        "sent_at": "2026-05-12T00:40:00Z",
+        "text": "공장 입고가 일주일 밀린대요. 6월 10일은 불가능합니다."
+      },
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-05-12T00:52:00Z",
+        "text": "그럼 런칭일을 6월 17일로 변경합니다. 광고 일정도 같이 옮겨주세요."
+      }
+    ]
+  },
+  {
+    "id": "log_m07",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#ad-budget",
+    "occurred_at": "2026-04-10T04:20:00Z",
+    "messages": [
+      {
+        "speaker": "이도현",
+        "sent_at": "2026-04-10T04:20:00Z",
+        "text": "예산은 인스타 6, 검색광고 3, 오프라인 1로 나누면 어떨까요?"
+      },
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-04-10T04:31:00Z",
+        "text": "오프라인 팝업을 늘리자는 의견도 있었는데 비용 대비 효과가 불확실해서 이번엔 최소로 갑니다. 6:3:1로 확정."
+      }
+    ]
+  },
+  {
+    "id": "log_m08",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#brand",
+    "occurred_at": "2026-05-05T06:10:00Z",
+    "messages": [
+      {
+        "speaker": "박지우",
+        "sent_at": "2026-05-05T06:10:00Z",
+        "text": "슬로건 초안은 '여름을 한 입에'입니다."
+      },
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-05-05T06:14:00Z",
+        "text": "일단 그걸로 진행해요."
+      }
+    ]
+  },
+  {
+    "id": "log_m09",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#brand",
+    "occurred_at": "2026-05-20T01:05:00Z",
+    "messages": [
+      {
+        "speaker": "최민아",
+        "sent_at": "2026-05-20T01:05:00Z",
+        "text": "법무 검토에서 '한 입에'가 과장 표현 소지가 있다고 합니다."
+      },
+      {
+        "speaker": "박지우",
+        "sent_at": "2026-05-20T01:12:00Z",
+        "text": "그럼 '한 입, 여름'으로 바꾸겠습니다. 브랜드 가이드에도 반영했어요."
+      }
+    ]
+  },
+  {
+    "id": "log_m10",
+    "project_id": "proj_marketing",
+    "source": "memo",
+    "title": "주간 회의 메모",
+    "occurred_at": "2026-05-22T08:00:00Z",
+    "messages": [
+      {
+        "speaker": "이도현",
+        "sent_at": "2026-05-22T08:00:00Z",
+        "text": "성과는 클릭률보다 전환 위주로 보는 게 좋겠어요."
+      },
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-05-22T08:02:00Z",
+        "text": "음, 일단 그렇게 보죠."
+      }
+    ]
+  },
+  {
+    "id": "log_m11",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#newsletter",
+    "occurred_at": "2026-05-28T02:00:00Z",
+    "messages": [
+      {
+        "speaker": "박지우",
+        "sent_at": "2026-05-28T02:00:00Z",
+        "text": "뉴스레터를 주 2회로 늘려서 보내 볼게요."
+      }
+    ]
+  },
+  {
+    "id": "log_m12",
+    "project_id": "proj_marketing",
+    "source": "slack",
+    "title": "#newsletter",
+    "occurred_at": "2026-06-03T02:20:00Z",
+    "messages": [
+      {
+        "speaker": "박지우",
+        "sent_at": "2026-06-03T02:20:00Z",
+        "text": "주 2회로 늘렸더니 수신 거부가 많이 늘었어요. 주 1회로 돌립니다."
+      },
+      {
+        "speaker": "김서윤",
+        "sent_at": "2026-06-03T02:25:00Z",
+        "text": "네, 그렇게 하세요."
+      }
+    ]
+  },
+  {
+    "id": "log_d01",
+    "project_id": "proj_dev",
+    "source": "slack",
+    "title": "#backend",
+    "occurred_at": "2026-03-10T01:00:00Z",
+    "messages": [
+      {
+        "speaker": "박민준",
+        "sent_at": "2026-03-10T01:00:00Z",
+        "text": "로그 저장소는 PostgreSQL로 가려고 합니다. 이미 운영 경험이 있어서요."
+      },
+      {
+        "speaker": "정우진",
+        "sent_at": "2026-03-10T01:06:00Z",
+        "text": "MongoDB도 검토했는데 스키마 변경이 잦지 않고 조인 쿼리가 많아서 이점이 작아요."
+      },
+      {
+        "speaker": "박민준",
+        "sent_at": "2026-03-10T01:10:00Z",
+        "text": "그럼 로그 저장소는 PostgreSQL로 확정하죠."
+      }
+    ]
+  },
+  {
+    "id": "log_d02",
+    "project_id": "proj_dev",
+    "source": "slack",
+    "title": "#backend",
+    "occurred_at": "2026-03-18T06:30:00Z",
+    "messages": [
+      {
+        "speaker": "박민준",
+        "sent_at": "2026-03-18T06:30:00Z",
+        "text": "검색은 Elasticsearch로 붙이겠습니다."
+      }
+    ]
+  },
+  {
+    "id": "log_d03",
+    "project_id": "proj_dev",
+    "source": "slack",
+    "title": "#backend",
+    "occurred_at": "2026-06-02T02:40:00Z",
+    "messages": [
+      {
+        "speaker": "정우진",
+        "sent_at": "2026-06-02T02:40:00Z",
+        "text": "Elasticsearch 라이선스 이슈가 있어서 OpenSearch로 바꾸기로 했습니다."
+      }
+    ]
+  },
+  {
+    "id": "log_d04",
+    "project_id": "proj_dev",
+    "source": "slack",
+    "title": "#release",
+    "occurred_at": "2026-03-25T05:00:00Z",
+    "messages": [
+      {
+        "speaker": "정우진",
+        "sent_at": "2026-03-25T05:00:00Z",
+        "text": "배포는 매주 목요일로 정합니다. 상시 배포는 롤백 부담이 커서 이번엔 안 합니다."
+      }
+    ]
+  },
+  {
+    "id": "log_d05",
+    "project_id": "proj_dev",
+    "source": "slack",
+    "title": "#ops",
+    "occurred_at": "2026-04-02T00:30:00Z",
+    "messages": [
+      {
+        "speaker": "박민준",
+        "sent_at": "2026-04-02T00:30:00Z",
+        "text": "알림은 이메일 말고 슬랙으로 받죠. 이메일은 놓치는 경우가 많았어요."
+      }
+    ]
+  },
+  {
+    "id": "log_d06",
+    "project_id": "proj_dev",
+    "source": "memo",
+    "title": "인프라 회의 메모",
+    "occurred_at": "2026-04-10T07:00:00Z",
+    "messages": [
+      {
+        "speaker": "정우진",
+        "sent_at": "2026-04-10T07:00:00Z",
+        "text": "로그 보관은 90일로 하면 될 듯."
+      },
+      {
+        "speaker": "박민준",
+        "sent_at": "2026-04-10T07:03:00Z",
+        "text": "일단 그렇게 가죠."
+      }
+    ]
+  },
+  {
+    "id": "log_d07",
+    "project_id": "proj_dev",
+    "source": "slack",
+    "title": "#backend",
+    "occurred_at": "2026-04-18T04:00:00Z",
+    "messages": [
+      {
+        "speaker": "정우진",
+        "sent_at": "2026-04-18T04:00:00Z",
+        "text": "API 인증은 JWT로 가고 세션 쿠키는 안 씁니다. 서버를 늘릴 때 세션 공유가 부담이라서요."
+      }
+    ]
+  }
+]

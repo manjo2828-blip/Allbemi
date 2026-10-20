@@ -1,0 +1,190 @@
+[
+  {
+    "id": "judg_m01",
+    "project_id": "proj_marketing",
+    "intent": {
+      "text": "메가 인플루언서 한 명 섭외해 볼까",
+      "topic": "influencer_selection",
+      "proposed_option": "메가 인플루언서"
+    },
+    "verdict": "rejected",
+    "matched_cards": [
+      {
+        "card_id": "card_m02",
+        "relation": "rejected_alternative",
+        "evidence_quote": "단가 대비 전환이 너무 낮았어요"
+      }
+    ],
+    "rejected_reason": "단가 대비 전환율이 낮음 (지난 가을 캠페인 결과)",
+    "confidence": "high",
+    "needs_review": false,
+    "explanation": "이미 검토 후 기각된 안입니다. 지난 가을 캠페인에서 메가 인플루언서는 단가 대비 전환이 낮아 마이크로 인플루언서 위주로 정했습니다."
+  },
+  {
+    "id": "judg_m02",
+    "project_id": "proj_marketing",
+    "intent": {
+      "text": "마이크로 인플루언서 10명 추가 계약하자",
+      "topic": "influencer_selection",
+      "proposed_option": "마이크로 인플루언서"
+    },
+    "verdict": "match",
+    "matched_cards": [
+      {
+        "card_id": "card_m02",
+        "relation": "active_decision",
+        "evidence_quote": "마이크로 인플루언서 위주로 계약하죠"
+      }
+    ],
+    "rejected_reason": null,
+    "confidence": "high",
+    "needs_review": false,
+    "explanation": "현재 유효한 결정과 같은 방향입니다. 마이크로 인플루언서 위주 계약이 이미 확정되어 있습니다."
+  },
+  {
+    "id": "judg_m03",
+    "project_id": "proj_marketing",
+    "intent": {
+      "text": "런칭일을 7월 첫째 주로 미루자",
+      "topic": "launch_date",
+      "proposed_option": "7월 첫째 주"
+    },
+    "verdict": "conflict",
+    "matched_cards": [
+      {
+        "card_id": "card_m06",
+        "relation": "active_decision",
+        "evidence_quote": "런칭일을 6월 17일로 변경합니다"
+      }
+    ],
+    "rejected_reason": null,
+    "confidence": "high",
+    "needs_review": false,
+    "explanation": "현재 유효한 결정(6월 17일)과 다른 방향입니다. 일정은 공장 입고 지연으로 한 번 변경된 상태입니다."
+  },
+  {
+    "id": "judg_m04",
+    "project_id": "proj_marketing",
+    "intent": {
+      "text": "런칭 주에 20% 쿠폰 뿌리자",
+      "topic": "promotion_coupon",
+      "proposed_option": "20% 할인 쿠폰"
+    },
+    "verdict": "rejected",
+    "matched_cards": [
+      {
+        "card_id": "card_m04",
+        "relation": "rejected_alternative",
+        "evidence_quote": "재무팀도 반대했어요"
+      },
+      {
+        "card_id": "card_m03",
+        "relation": "superseded_decision",
+        "evidence_quote": "20% 할인 쿠폰을 배포하는 안으로 갑시다"
+      }
+    ],
+    "rejected_reason": "신제품 가격 이미지 훼손 우려, 재무팀 반대",
+    "confidence": "high",
+    "needs_review": false,
+    "explanation": "한 번 결정됐다가 철회된 안입니다. 가격 이미지 훼손 우려와 재무팀 반대로 사은품 증정으로 대체되었습니다."
+  },
+  {
+    "id": "judg_m05",
+    "project_id": "proj_marketing",
+    "intent": {
+      "text": "성과 보고서에 클릭률도 같이 보여주자",
+      "topic": "kpi_metric",
+      "proposed_option": "클릭률 병기"
+    },
+    "verdict": "match",
+    "matched_cards": [
+      {
+        "card_id": "card_m10",
+        "relation": "active_decision",
+        "evidence_quote": "클릭률보다 전환 위주로 보는 게 좋겠어요"
+      }
+    ],
+    "rejected_reason": null,
+    "confidence": "low",
+    "needs_review": true,
+    "explanation": "전환율 중심이라는 결정과 충돌하지는 않지만, 해당 결정의 근거가 짧아 확인이 필요합니다."
+  },
+  {
+    "id": "judg_m06",
+    "project_id": "proj_marketing",
+    "intent": {
+      "text": "사무실 에어컨 온도 낮춰 달라고 요청하자",
+      "topic": "office_facility",
+      "proposed_option": null
+    },
+    "verdict": "unrelated",
+    "matched_cards": [],
+    "rejected_reason": null,
+    "confidence": "high",
+    "needs_review": false,
+    "explanation": "관련된 결정 카드가 없습니다."
+  },
+  {
+    "id": "judg_d01",
+    "project_id": "proj_dev",
+    "intent": {
+      "text": "로그 검색용으로 MongoDB 도입해 볼까",
+      "topic": "log_storage",
+      "proposed_option": "MongoDB"
+    },
+    "verdict": "rejected",
+    "matched_cards": [
+      {
+        "card_id": "card_d01",
+        "relation": "rejected_alternative",
+        "evidence_quote": "조인 쿼리가 많아서 이점이 작아요"
+      }
+    ],
+    "rejected_reason": "스키마 변경이 잦지 않고 조인 쿼리가 많아 이점이 작음",
+    "confidence": "high",
+    "needs_review": false,
+    "explanation": "이미 검토 후 기각된 안입니다. 스키마 변경이 잦지 않고 조인 쿼리가 많아 PostgreSQL로 확정했습니다."
+  },
+  {
+    "id": "judg_d02",
+    "project_id": "proj_dev",
+    "intent": {
+      "text": "로그 테이블 인덱스를 튜닝하자",
+      "topic": "log_storage",
+      "proposed_option": "PostgreSQL 인덱스 튜닝"
+    },
+    "verdict": "match",
+    "matched_cards": [
+      {
+        "card_id": "card_d01",
+        "relation": "active_decision",
+        "evidence_quote": "로그 저장소는 PostgreSQL로 확정하죠"
+      }
+    ],
+    "rejected_reason": null,
+    "confidence": "medium",
+    "needs_review": false,
+    "explanation": "PostgreSQL 사용 결정과 같은 방향의 작업입니다."
+  },
+  {
+    "id": "judg_d03",
+    "project_id": "proj_dev",
+    "intent": {
+      "text": "로그 보관 기간을 1년으로 늘리자",
+      "topic": "log_retention",
+      "proposed_option": "1년"
+    },
+    "verdict": "conflict",
+    "matched_cards": [
+      {
+        "card_id": "card_d06",
+        "relation": "active_decision",
+        "evidence_quote": "로그 보관은 90일로 하면 될 듯"
+      }
+    ],
+    "rejected_reason": null,
+    "confidence": "low",
+    "needs_review": true,
+    "explanation": "현재 결정(90일)과 다른 방향이지만, 해당 결정이 임시 기준으로 보여 확인이 필요합니다."
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "log.schema.json",
+  "title": "Log",
+  "description": "원문 로그 1건(슬랙 스레드 또는 메모). 카드의 evidence가 가리키는 대상.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "project_id", "source", "title", "occurred_at", "messages"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^log_[a-z0-9_]+$" },
+    "project_id": { "type": "string", "pattern": "^proj_[a-z0-9_]+$" },
+    "source": { "enum": ["slack", "memo"] },
+    "title": { "type": "string", "description": "채널 이름 또는 메모 제목" },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "messages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["speaker", "sent_at", "text"],
+        "properties": {
+          "speaker": { "type": "string", "minLength": 1 },
+          "sent_at": { "type": "string", "format": "date-time" },
+          "text": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

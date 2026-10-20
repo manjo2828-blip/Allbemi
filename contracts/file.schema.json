@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "file.schema.json",
+  "title": "AttachedFile",
+  "description": "카드에 연결되는 자료 파일의 메타데이터. 파일 본체는 별도 볼륨에 저장하고 여기에는 넣지 않는다.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "project_id", "name", "mime_type", "size_bytes", "uploaded_by", "uploaded_at", "note", "linked_card_ids", "is_synthetic"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^file_[a-z0-9_]+$" },
+    "project_id": { "type": "string", "pattern": "^proj_[a-z0-9_]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "mime_type": { "type": "string" },
+    "size_bytes": { "type": "integer", "minimum": 0 },
+    "uploaded_by": { "type": "string", "minLength": 1 },
+    "uploaded_at": { "type": "string", "format": "date-time" },
+    "note": { "type": "string", "description": "자료가 무엇이고 어디에 쓰는지 한 줄" },
+    "linked_card_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^card_[a-z0-9_]+$" }
+    },
+    "is_synthetic": { "type": "boolean", "description": "예시용 합성 자료 여부. 공개 저장소에는 true만 둔다." }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "judgment.schema.json",
+  "title": "Judgment",
+  "description": "장면 ① 판정 결과. POST /api/judge 응답이자 에이전트 /v1/run(task=judge)의 출력. 평가의 정답 형식으로도 쓴다.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "project_id", "intent", "verdict", "matched_cards",
+    "rejected_reason", "confidence", "needs_review", "explanation"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^judg_[a-z0-9_]+$" },
+    "project_id": { "type": "string", "pattern": "^proj_[a-z0-9_]+$" },
+    "intent": {
+      "type": "object",
+      "description": "사용자가 하려는 일을 구조화한 것. 화면 왼쪽 '내 입력 카드'와 검색 질의 재작성의 결과.",
+      "additionalProperties": false,
+      "required": ["text", "topic", "proposed_option"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "topic": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "proposed_option": { "type": ["string", "null"], "description": "제안하는 선택지. 없으면 null" }
+      }
+    },
+    "verdict": { "enum": ["match", "conflict", "rejected", "unrelated"] },
+    "matched_cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["card_id", "relation", "evidence_quote"],
+        "properties": {
+          "card_id": { "type": "string", "pattern": "^card_[a-z0-9_]+$" },
+          "relation": { "enum": ["active_decision", "rejected_alternative", "deprecated_decision", "superseded_decision"] },
+          "evidence_quote": { "type": "string", "minLength": 1, "description": "판정 근거가 되는 카드·로그의 문장" }
+        }
+      }
+    },
+    "rejected_reason": { "type": ["string", "null"], "description": "verdict가 rejected일 때 기각 이유" },
+    "confidence": { "enum": ["high", "medium", "low"] },
+    "needs_review": { "type": "boolean" },
+    "explanation": { "type": "string", "minLength": 1, "description": "한두 문장 설명. 근거 카드를 인용한다." }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "verdict": { "enum": ["match", "conflict", "rejected"] } } },
+      "then": { "properties": { "matched_cards": { "minItems": 1 } } }
+    },
+    {
+      "if": { "properties": { "verdict": { "const": "unrelated" } } },
+      "then": { "properties": { "matched_cards": { "maxItems": 0 } } }
+    },
+    {
+      "if": { "properties": { "verdict": { "const": "rejected" } } },
+      "then": { "properties": { "rejected_reason": { "type": "string", "minLength": 1 } } }
+    },
+    {
+      "if": { "properties": { "confidence": { "const": "low" } } },
+      "then": { "properties": { "needs_review": { "const": true } } }
+    }
+  ]
+}
